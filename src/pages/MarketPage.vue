@@ -14,7 +14,6 @@
                  class="form-control p-4"
                  placeholder="Bitcoin, Ethereum, Doge"
                  v-model="state.query"
-                 @input="searchCoins"
           >
         </div>
       </div>
@@ -36,18 +35,13 @@ export default {
   components: { CoinComponent },
   setup() {
     const state = reactive({
-      marketData: computed(() => AppState.marketData),
-      filteredCoins: [],
+      marketData: computed(() => AppState.marketData.filter(coin => coin.name.toLowerCase().includes(state.query.toLowerCase()))),
+      filteredCoins: AppState.marketData,
       query: ''
     })
     onMounted(() => marketsService.getAllMarketCoins())
     return {
-      state,
-      searchCoins() {
-        console.log("hey")
-        state.marketData.filter(coin => coin.name.toLowerCase().includes(state.query.toLowerCase()))
-        console.log(state.marketData)
-      }
+      state
     }
   }
 }
