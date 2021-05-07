@@ -1,13 +1,15 @@
 <template>
   <div class="container-fluid">
-    Hey
+    <home-component />
   </div>
 </template>
 
 <script>
 import { reactive } from 'vue'
+import HomeComponent from '../components/HomeComponent.vue'
 export default {
   name: 'Home',
+  components: { HomeComponent },
   setup() {
     const state = reactive({
 
