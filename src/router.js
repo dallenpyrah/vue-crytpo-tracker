@@ -27,6 +27,11 @@ const routes = [
     component: loadPage('TrendingPage')
   },
   {
+    path: '/coinpage/:id',
+    name: 'CoinPage',
+    component: loadPage('CoinPage')
+  },
+  {
     path: '/account',
     name: 'Account',
     component: loadPage('AccountPage'),

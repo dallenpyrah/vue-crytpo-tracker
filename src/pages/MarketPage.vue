@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="row justify-content-center">
       <div class="col-4 text-center">
-        <h5>Search for coins</h5>
+        <h5 class="text-light">Search for coins</h5>
       </div>
     </div>
     <div class="row justify-content-center mt-3">

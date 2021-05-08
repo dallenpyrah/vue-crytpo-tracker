@@ -1,7 +1,7 @@
 <template>
   <div class="row justify-content-center">
     <div class="col-6">
-      <h2 class="main-text-class text-left">
+      <h2 class="main-text-class text-light text-left">
         Evalute crypto market data in real time with <span class="text-secondary">Piqo</span><span class="text-primary">Coin</span>
       </h2>
       <p class="secondary-text-class">
@@ -61,7 +61,7 @@ export default {
   font-size: 25px;
   font-weight: 400;
   margin-top: 5rem;
-  color:rgb(39, 39, 39)!important;
+  color:rgb(107, 107, 107)!important;
   margin-left: 5rem;
 }
 </style>

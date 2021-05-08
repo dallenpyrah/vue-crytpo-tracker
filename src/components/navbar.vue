@@ -1,8 +1,8 @@
 <template>
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar navbar-expand-lg bg-dark">
     <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
       <div class="d-flex flex-column align-items-center">
-        <h5 class="text-dark mt-2">Piqo<span class="text-primary">Coin</span></h5>
+        <h5 class="text-light mt-2">Piqo<span class="text-primary">Coin</span></h5>
       </div>
     </router-link>
     <button
@@ -24,7 +24,7 @@
           </router-link>
         </li>
         <li class="nav-item">
-          <router-link :to="{ name: '' }" class="nav-link">
+          <router-link :to="{ name: 'Market' }" class="nav-link">
             Market
           </router-link>
         </li>
@@ -118,6 +118,6 @@ a:hover {
   text-transform: uppercase;
 }
 .nav-item .nav-link.router-link-exact-active{
-  color: var(--dark);
+  color: var(--light);
 }
 </style>

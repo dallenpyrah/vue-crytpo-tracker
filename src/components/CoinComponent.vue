@@ -1,6 +1,6 @@
 <template>
   <div class="col-8">
-    <div class="card card-class">
+    <div class="card card-class" @click="toCoinPage">
       <div class="row">
         <div class="col-2">
           <img class="image-class" :src="coinProp.image" alt="">
@@ -32,15 +32,20 @@
 
 <script>
 import { reactive } from 'vue'
+import { useRouter } from 'vue-router'
 export default {
   name: 'CoinComponent',
   props: { coinProp: { type: Object, required: true } },
-  setup() {
+  setup(props) {
+    const router = useRouter()
     const state = reactive({
 
     })
     return {
-      state
+      state,
+      toCoinPage() {
+        router.push({ name: 'CoinPage', params: { id: props.coinProp.id } })
+      }
     }
   }
 }
